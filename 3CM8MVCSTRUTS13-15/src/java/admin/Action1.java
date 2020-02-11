@@ -15,7 +15,6 @@ public class Action1 extends org.apache.struts.action.Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        
         ActionForm1 forma=(ActionForm1)form;
         if(forma.getId().equals("ruben")){
             return mapping.findForward(SUCCESS);
