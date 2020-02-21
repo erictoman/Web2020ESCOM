@@ -1,0 +1,11 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd"> 
+<struts>
+	<package name="escom" namespace="/Usuario" extends="struts-default">
+		<action name="Bienvenido" class="escom.BienvenidoAction">
+			<result name="exitoso">/salida.jsp</result>
+		</action>
+	</package>
+ 
+</struts>
