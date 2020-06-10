@@ -24,13 +24,13 @@ public class LoginChecker {
     public LoginChecker() {
         try{
             Class.forName("com.mysql.jdbc.Driver");     
-            String user="eric";
+            String user="root";
             String pass="2312";
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/DB2",user,pass);         
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb",user,pass);         
             Statement stmt= con.createStatement();
-            ResultSet rs=stmt.executeQuery("select * from Users");
+            ResultSet rs=stmt.executeQuery("select * from usuario");
             while(rs.next()){
-                map.put(rs.getString("id1"),rs.getString("password"));
+                map.put(rs.getString("nombre"),rs.getString("password"));
             }
         }catch(Exception e ){
             e.printStackTrace();

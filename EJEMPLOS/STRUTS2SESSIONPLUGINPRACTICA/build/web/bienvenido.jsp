@@ -4,13 +4,11 @@
 <head></head>
 <body>
 	<h1>STRUTS 2 SESSION</h1>
- 
 	<h4>
         Bienvenido (OGNL):
-        <s:iterator value="%{#session.username}">
-          <s:property/>
-        </s:iterator>
+            <s:iterator value="%{#session.username}">
+              <s:property/>
+            </s:iterator>
 	</h4>
- 
 </body>
 </html>

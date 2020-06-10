@@ -6,28 +6,39 @@ import org.apache.struts2.interceptor.SessionAware;
 
 public class Accion extends ActionSupport implements SessionAware
 {
-private String username;    
+    
 private Map<String, Object> sessionMap;
+private String username;
+private String password;    
+
     @Override
     public void setSession(Map<String, Object> sessionMap) 
     {
-    this.sessionMap = sessionMap;
+        this.sessionMap = sessionMap;
     }    
     
     public String getUsername() 
     {
-    return username;
+        return username;
     }
  
     public void setUsername(String username) 
     {
-    this.username = username;
+        this.username = username;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 	
-@Override
+    @Override
     public String execute()
     {
+        
         sessionMap.put("username", username);
-        return "exitoso";
+        return "welcome";
     }    
 }

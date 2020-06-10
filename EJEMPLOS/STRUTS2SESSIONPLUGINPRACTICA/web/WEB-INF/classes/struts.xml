@@ -5,7 +5,7 @@
 <struts>
 	<package name="paquete" namespace="/Usuario" extends="struts-default">
 		<action name="Session" class="paquete.Accion">
-			<result name="exitoso">/salida.jsp</result>
+			<result name="welcome">/bienvenido.jsp</result>
 		</action>
 	</package>
  
